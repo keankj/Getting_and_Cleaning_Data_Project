@@ -1,5 +1,7 @@
 # Course Project Codebook
 
+This codebook describes the variables, the data, and any transformations or work that I performed to clean up the data
+
 1) Reads `X_train.txt` and `X_test.txt` and stores them in `t1` and `t2` respectively. Concatenate `t1` and `t2` to create `X` (10299x561 data frame). Reads `y_train.txt` and `y_test.txt` and stores them in `t1` and `t2` respectively. Concatenate `t1` and `t2` to create `Y` (10299x1 data frame). Reads `subject_train.txt` and `subject_test.txt` and stores them in `t1` and `t2` respectively. Concatenate `t1` and `t2` to create `S` (10299x1 data frame).
 
 2) Reads `features.txt`, extracts only the measurements on the mean and standard deviation for each measurement and stores the data in a variable named `features`(10299x66 data frame). The 66 features (or columns) are as follows:
@@ -86,4 +88,4 @@ laying
 
 4) Merges `S`, `X` & `Y` to create a table named `cleaned` (10299x68 dataframe). First column `subject` contains subject IDs, second column `activity` contains activity names and the last 66 columns contain measurements that range between -1 to 1. Write the `cleaned` data to `merged_dataset.txt` file in the current working directory.
 
-5) Creates another tidy dataset with the average of each variable for each activity and each subject. 30 subjects X 6 activities = 180 combinations. For each combination, the mean of each measurement is calculated with the corresponding combination (180x68 data frame). Writes the output to `averages_dataset.txt` file in the current working directory.
+5) Creates another tidy dataset with the average of each variable for each activity and each subject. 30 subjects X 6 activities = 180 combinations. For each combination, the mean of each measurement is calculated with the corresponding combination (180x68 data frame). Writes the `result` to `averages_dataset.txt` file in the current working directory.
